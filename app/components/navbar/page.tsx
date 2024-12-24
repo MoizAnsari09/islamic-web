@@ -24,6 +24,9 @@ export default function Navbar() {
             <Link href="/Media/Naat" className="hover:text-gray-900 text-white">
               Naat
             </Link>
+            <Link href="/Media/Kalaam" className="hover:text-gray-900 text-white">
+              Kalaam
+            </Link>
             
           </nav>
         </div>

@@ -48,6 +48,27 @@ export default function Contant() {
                         Click to Watch
                     </Link>
                 </div>
+                {/* Kalaam section */}
+                <div className="bg-white border-2 border-black flex flex-col items-center p-3 w-[500px]">
+                    <h1 className="text-center font-bold text-lg md:text-xl">Naat</h1>
+                    <Link href="/Media/Kalaam">
+                        <div className="mt-3 mb-3 w-full cursor-pointer">
+                            <Image
+                                src="/k/k3.jpg"
+                                alt="Picture of the author"
+                                className="rounded-lg"
+                                width={500} 
+                                height={500} 
+                            />
+                        </div>
+                    </Link>
+                    <Link 
+                        href="/Media/Kalaam" 
+                        className="no-underline text-md md:text-lg text-black text-center"
+                    >
+                        Click to Watch
+                    </Link>
+                </div>
             </div>
         </div>
     );
