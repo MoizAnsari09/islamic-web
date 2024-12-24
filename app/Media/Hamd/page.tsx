@@ -35,22 +35,22 @@ export default function Hamd() {
           
           {
             title: "Tera Hi Hai Sahara",
-            imgSrc: "/h/Hamd.jpg",
+            imgSrc: "/h/h1.jpg",
             link: "https://drive.google.com/file/d/1eUz-tuYCGTy9ExhVJeLJIYwlYVT4i1Ex/view?usp=sharing",
           },
           {
             title: "Tera Hi Hai Sahara",
-            imgSrc: "/h/Hamd.jpg",
+            imgSrc: "/h/h1.jpg",
             link: "https://drive.google.com/file/d/1eUz-tuYCGTy9ExhVJeLJIYwlYVT4i1Ex/view?usp=sharing",
           },
           {
             title: "Tera Hi Hai Sahara",
-            imgSrc: "/h/Hamd.jpg",
+            imgSrc: "/h/h1.jpg",
             link: "https://drive.google.com/file/d/1eUz-tuYCGTy9ExhVJeLJIYwlYVT4i1Ex/view?usp=sharing",
           },
           {
             title: "Tera Hi Hai Sahara",
-            imgSrc: "/h/Hamd.jpg",
+            imgSrc: "/h/h1.jpg",
             link: "https://drive.google.com/file/d/1eUz-tuYCGTy9ExhVJeLJIYwlYVT4i1Ex/view?usp=sharing",
           },
          

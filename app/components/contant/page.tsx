@@ -11,7 +11,7 @@ export default function Contant() {
                     <Link href="/Media/Hamd">
                         <div className="mt-3 mb-3 w-full cursor-pointer">
                             <Image
-                                src="/h/Hamd.jpg"
+                                src="/h/h1.jpg"
                                 alt="Picture of the author"
                                 className="rounded-lg"
                                 width={500} 
