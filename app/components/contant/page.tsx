@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Contant() {
     return (
         <div className="flex justify-center items-center bg-gray-200 p-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {/* Hamd Section */}
                 <div className="bg-white border-2 border-black flex flex-col items-center p-3 w-[500px]">
                     <h1 className="text-center font-bold text-lg md:text-xl">Hamd</h1>
