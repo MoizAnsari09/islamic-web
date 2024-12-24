@@ -7,82 +7,58 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // State to toggle sidebar
 
   return (
-    <div>
-     
-
-      {/* Navbar Section */}
-      <header className="bg-blue-400 text-gray-600 body-font">
-        {/* Top Navbar for Desktop Only */}
-        <div className="hidden md:flex justify-center items-center p-4">
-          <nav className="flex space-x-6 text-sm sm:text-base">
-            <Link href="/" className="hover:text-gray-900 text-white">
-              Home
-            </Link>
-            <Link href="/Media/Hamd" className="hover:text-gray-900 text-white">
-              Hamd
-            </Link>
-            <Link href="/Media/Naat" className="hover:text-gray-900 text-white">
-              Naat
-            </Link>
-            <Link href="/Media/Kalaam" className="hover:text-gray-900 text-white">
-              Kalaam
-            </Link>
-            
-          </nav>
+    <header className="bg-blue-500 text-white">
+      {/* Desktop Navbar */}
+      <nav className="hidden md:flex justify-center items-center py-4">
+        <div className="flex space-x-8">
+          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/Media/Hamd" className="hover:underline">Hamd</Link>
+          <Link href="/Media/Naat" className="hover:underline">Naat</Link>
+          <Link href="/Media/Kalaam" className="hover:underline">Kalaam</Link>
         </div>
+      </nav>
 
-        {/* Hamburger Button for Mobile and Tablet */}
-        <div className="flex justify-between items-center p-4 md:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none"
-          >
-            {/* Hamburger Icon */}
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
-        </div>
-
-        {/* Sidebar for Mobile and Tablet */}
-        <div
-          className={`fixed top-0 left-0 h-full bg-blue-400 p-4 transform ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform md:hidden`}
+      {/* Mobile Navbar */}
+      <div className="md:hidden flex justify-between items-center p-4">
+        <h1 className="text-lg font-bold">Menu</h1>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="focus:outline-none"
         >
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-white mb-4"
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Close
-          </button>
-          <nav className="flex flex-col space-y-4 text-sm sm:text-base">
-            <Link href="/" className="hover:text-gray-900 text-white">
-              Home
-            </Link>
-            <Link href="/Media/Hamd" className="hover:text-gray-900 text-white">
-              Hamd
-            </Link>
-            <Link href="/Media/Naat" className="hover:text-gray-900 text-white">
-              Naat
-            </Link>
-            <Link href="/Media/Kalaam" className="hover:text-gray-900 text-white">
-              Kalaam
-            </Link>
-          </nav>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {/* Sidebar */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-blue-600 bg-opacity-90 z-50">
+          <div className="flex flex-col items-start p-6 space-y-6">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="self-end text-white"
+            >
+              Close
+            </button>
+            <Link href="/" className="hover:underline text-lg">Home</Link>
+            <Link href="/Media/Hamd" className="hover:underline text-lg">Hamd</Link>
+            <Link href="/Media/Naat" className="hover:underline text-lg">Naat</Link>
+            <Link href="/Media/Kalaam" className="hover:underline text-lg">Kalaam</Link>
+          </div>
         </div>
-      </header>
-    </div>
+      )}
+    </header>
   );
 }

@@ -1,35 +1,22 @@
-import Header from "../../components/Header/page";
+import Logo from "@/app/components/logo/page";
+import Navbar from "@/app/components/navbar/page";
+import Benner from "@/app/components/benner/page";
+import Header from "@/app/components/Header/page";
 import Footer from "../../components/footer/page";
 
 import Image from 'next/image';
-import Navbar from '../../components/navbar/page';
+
 
 import Link from 'next/link';
 
 export default function Hamd() {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center h-[200px] sm:h-[300px] w-full bg-cover">
-        <Image
-          src="/main 2.png"
-          alt="Logo Image"
-          className="w-[200px] sm:w-[300px] lg:w-[400px] object-contain"
-          width={1000}
-          height={200}
-          priority
-        />
-      </div>
-      <Navbar />
-      <div className="relative h-[40vh] sm:h-[50vh] md:h-[70vh] w-full bg-cover">
-        <Image
-          src="/benn/7 (5).jpg"
-        alt="Banner Image"
-        fill // Automatically fills the parent container
-        style={{ objectFit: "cover" }} // Replaces the legacy 'objectFit' prop
-        priority // Ensures the image is loaded as high priority
-        />
-      </div>
-      <Header />
+      <Logo/>
+      <Navbar/>
+      <Benner/>
+      <Header/>
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-gray-200 p-4">
         {[
           
@@ -57,17 +44,17 @@ export default function Hamd() {
         ].map((item, index) => (
           <div
             key={index}
-            className="h-auto bg-white border-2 border-black p-4 flex flex-col items-center"
+            className="h-auto bg-white border-2 border-black p-4 flex flex-col items-center transition-transform transform hover:scale-105"
           >
             <h1 className="text-center font-bold text-xl sm:text-2xl mb-4">
               {item.title}
             </h1>
             <Link href={item.link}>
-              <div className="w-full h-[200px] sm:h-[300px]">
+              <div className="w-full h-[200px] sm:h-[300px] overflow-hidden">
                 <Image
                   src={item.imgSrc}
                   alt={item.title}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain transition-transform transform hover:scale-110"
                   width={1000}
                   height={1000}
                   priority
@@ -76,7 +63,7 @@ export default function Hamd() {
             </Link>
             <Link
               href={item.link}
-              className="mt-4 text-center text-sm sm:text-lg text-blue-600 hover:underline"
+              className="mt-4 text-center text-sm sm:text-lg text-blue-600 hover:underline transition-colors hover:text-blue-800"
             >
               Click to Watch
             </Link>
