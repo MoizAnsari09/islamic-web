@@ -1,19 +1,14 @@
-import Logo from "@/app/components/logo/page";
-import Navbar from "@/app/components/navbar/page";
-import Benner from "@/app/components/benner/page";
-import Header from "@/app/components/Header/page";
-import Footer from "../../components/footer/page";
+
 
 import Image from 'next/image';
 
-
+import Benner from "@/app/components/benner/page";
+import Header from "@/app/components/Header/page";
 import Link from 'next/link';
 
 export default function Hamd() {
   return (
     <div>
-      <Logo/>
-      <Navbar/>
       <Benner/>
       <Header/>
       
@@ -70,7 +65,7 @@ export default function Hamd() {
           </div>
         ))}
       </div>
-      <Footer />
+      
     </div>
   );
 }

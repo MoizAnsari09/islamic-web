@@ -1,17 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/app/components/logo/page";
-import Navbar from "@/app/components/navbar/page";
-import Benner from "@/app/components/benner/page";
-import Header from "@/app/components/Header/page";
+
 export default function Contant() {
     return (
         <div>
-        <Logo/>
-        <Navbar/>
-        <Benner/>
-        <Header/>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-200 p-4">
                 {/* Hamd Section */}
                 <div className="bg-white border-2 border-black flex flex-col items-center p-3 w-full transition-transform transform hover:scale-105">
                     <h1 className="text-center font-bold text-lg md:text-xl">Hamd</h1>

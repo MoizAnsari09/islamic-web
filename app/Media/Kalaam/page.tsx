@@ -1,21 +1,15 @@
-import Logo from "@/app/components/logo/page";
-import Navbar from "@/app/components/navbar/page";
-import Benner from "@/app/components/benner/page";
-import Header from "@/app/components/Header/page";
-import Footer from "../../components/footer/page";
 
 import Image from 'next/image';
-
+import Benner from "@/app/components/benner/page";
+import Header from "@/app/components/Header/page";
 
 import Link from 'next/link';
 
 export default function Kalaam() {
   return (
     <div>
-      <Logo/>
-      <Navbar/>
       <Benner/>
-     <Header/>
+      <Header/>
 
       {/* Content Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 bg-gray-200 p-4">
@@ -72,7 +66,7 @@ export default function Kalaam() {
         ))}
       </div>
 
-      <Footer />
+      
     </div>
   );
 }
